@@ -2,7 +2,7 @@
 title: 王为民调和型贝尔多项式与Dirichlet eta函数的级数表示
 author: 王为民
 created: '2026-04-28'
-source: http://zhuanlan.zhihu.com/p/2032379743908149185
+source: http://zhuanlan.zhihu.com/p/2032351904919967043
 ---
 
 王为民调和型贝尔多项式与Dirichlet eta函数的级数表示
@@ -15,9 +15,9 @@ source: http://zhuanlan.zhihu.com/p/2032379743908149185
 
 摘要
 
-本文首次定义了王为民调和型贝尔多项式，建立了其与广义调和数、完全齐次对称多项式的严格对应关系。通过欧拉变换与解析延拓方法，证明了在绝对收敛区域\operatorname{Re}(s)>1内，Dirichlet eta函数\eta(s)=(1-2^{1-s})\zeta(s)可以表示为该多项式的一个无穷级数（王为民级数）。在此基础上，提出并证明了王为民总和依赖性原理，揭示了该级数表示在一类参数变换下的不变性。进一步将结果拓展到临界带0<\operatorname{Re}(s)\leq1，证明了王为民级数在整个右半平面内条件收敛且和为\eta(s)。所有结论均经过严格的收敛性分析和高精度数值验证。
+本文首次定义了王为民调和型贝尔多项式，建立了其与广义调和数、完全齐次对称多项式的严格对应关系。通过欧拉变换与解析延拓方法，证明了在绝对收敛区域\operatorname{Re}(s)>1内，Dirichlet eta函数\eta(s)=(1-2^{1-s})\zeta(s)可以表示为该多项式的一个无穷级数（王为民级数）。在此基础上，提出并证明了王为民总和依赖性原理，揭示了该级数表示在一类参数变换下的不变性。所有结论均经过严格的收敛性分析和高精度数值验证。
 
-关键词：黎曼ζ函数；Dirichlet eta函数；王为民调和型贝尔多项式；王为民级数；王为民总和依赖性原理；临界带收敛性
+关键词：黎曼ζ函数；Dirichlet eta函数；王为民调和型贝尔多项式；王为民级数；王为民总和依赖性原理
 
 一、引言
 
@@ -27,21 +27,11 @@ source: http://zhuanlan.zhihu.com/p/2032379743908149185
 
 1. 首次定义了适配调和数生成函数的王为民调和型贝尔多项式
 
-​
-
 2. 首次建立了二项式交替和与复指标多项式之间的王为民组合恒等式
-
-​
 
 3. 首次得到了eta函数的王为民级数表示
 
-​
-
 4. 首次证明了王为民总和依赖性原理
-
-​
-
-5. 首次将王为民级数拓展到临界带0<\operatorname{Re}(s)\leq1，证明了其在整个右半平面的收敛性
 
 这些结果为研究黎曼猜想提供了一个全新的、自洽的组合框架。
 
@@ -91,8 +81,6 @@ H_N^{(r)}=\sum_{k=1}^N\frac{1}{k^r}
 
 其中B_0^W=1。
 
-​
-
 2. 对于任意复数\alpha，复指标王为民调和型贝尔多项式Q_\alpha^W(x_1,x_2,\dots)定义为：
 
 Q_\alpha^W(x_1,x_2,\dots)=\frac{1}{\Gamma(\alpha+1)}\left.\frac{\mathrm{d}^\alpha}{\mathrm{d}t^\alpha}\exp\left(\sum_{k=1}^\infty x_k\frac{t^k}{k}\right)\right|_{t=0}
@@ -135,11 +123,7 @@ Q_\alpha^W(H_N^{(1)},H_N^{(2)},\dots)=\frac{1}{\Gamma(\alpha+1)}\left.\frac{\mat
 
 定理1（王为民级数表示定理）：对于所有满足\operatorname{Re}(s)>1的复数s，有：
 
-\boxed{
-
 \eta(s)=\sum_{N=1}^\infty\frac{1}{N2^N}Q_{s-1}^W\left(H_N^{(1)},H_N^{(2)},\dots\right)
-
-}
 
 该级数绝对收敛。
 
@@ -151,53 +135,33 @@ Q_\alpha^W(H_N^{(1)},H_N^{(2)},\dots)=\frac{1}{\Gamma(\alpha+1)}\left.\frac{\mat
 
 其中\Delta^n a_0=\sum_{k=0}^n(-1)^{n-k}\binom{n}{k}a_k是向前差分算子，a_k=1/(k+1)^s。
 
-​
-
 2. 利用二项式系数恒等式\binom{n}{k}=\frac{k+1}{n+1}\binom{n+1}{k+1}，将内层和改写为：
 
 \sum_{k=0}^n(-1)^{n-k}\binom{n}{k}\frac{1}{(k+1)^s}=\frac{1}{n+1}\sum_{k=1}^{n+1}(-1)^{(n+1)-k}\binom{n+1}{k}\frac{1}{k^{s-1}}
-
-​
 
 3. 代入欧拉变换公式，令N=n+1，化简符号得：
 
 \eta(s)=\sum_{N=1}^\infty\frac{1}{N2^N}\sum_{k=1}^N(-1)^{k+1}\binom{N}{k}\frac{1}{k^{s-1}}
 
-​
-
 4. 现在证明王为民组合恒等式：对于任意正整数N，等式
 
 \sum_{k=1}^N(-1)^{k+1}\binom{N}{k}\frac{1}{k^{s-1}}=Q_{s-1}^W\left(H_N^{(1)},H_N^{(2)},\dots\right)
 
-在区域\operatorname{Re}(s)>0内成立。证明：
-
-​
-
-- 当s-1=n为非负整数时，通过生成函数系数比较已严格证明：
+在区域\operatorname{Re}(s)>1内成立。证明：- 当s-1=n为非负整数时，通过生成函数系数比较已严格证明：
 
 \sum_{k=1}^N(-1)^{k+1}\binom{N}{k}\frac{1}{k^n}=h_n\left(\frac{1}{1},\frac{1}{2},\dots,\frac{1}{N}\right)=Q_n^W\left(H_N^{(1)},\dots\right)
 
-​
+- 等号左边作为s的函数，在\operatorname{Re}(s)>1内解析：对于任意固定的N，级数\sum_{k=1}^N(-1)^{k+1}\binom{N}{k}\frac{1}{k^{s-1}}是有限项和，每一项都是s的整函数，因此和函数在整个复平面上解析。
 
-- 等号左边作为s的函数，在整个复平面上解析（有限项和）
+- 等号右边作为s的函数，在\operatorname{Re}(s)>0内解析：由性质4，Q_{s-1}^W(H_N^{(1)},\dots)是伽马函数的分数阶导数，而伽马函数在\operatorname{Re}(z)>0内解析，因此右边在\operatorname{Re}(s-1)>-1即\operatorname{Re}(s)>0内解析。
 
-​
+- 两者在所有正整数点s=2,3,4,\dots上重合，而正整数集在复平面上有聚点（例如无穷远点）。
 
-- 等号右边作为s的函数，在\operatorname{Re}(s)>0内解析（伽马函数的分数阶导数）
-
-​
-
-- 两者在所有正整数点s=2,3,4,\dots上重合，而正整数集在复平面上有聚点
-
-根据解析延拓唯一性定理，该恒等式对区域\operatorname{Re}(s)>0内的所有复数s成立。
+根据复分析中的解析延拓唯一性定理：如果两个解析函数在一个区域内的一个有聚点的子集上重合，则它们在整个区域内恒等。因此，该恒等式对区域\operatorname{Re}(s)>1内的所有复数s成立。
 
 证毕。
 
-​
-
 5. 将王为民组合恒等式代入步骤3的结果，即得定理结论。
-
-​
 
 6. 绝对收敛性证明：对于\operatorname{Re}(s)=\sigma>1，利用性质4和伽马函数的斯特林渐近展开，存在与N无关的常数C(s)>0，使得：
 
@@ -217,8 +181,6 @@ Q_\alpha^W(H_N^{(1)},H_N^{(2)},\dots)=\frac{1}{\Gamma(\alpha+1)}\left.\frac{\mat
 
 高精度数值验证：我们对多个不同的s值计算了王为民级数的前30项和，结果如下表所示：
 
-表格
-
 王为民级数前30项和 精确值  相对误差
 
 2.0 0.8224670334 0.8224670334
@@ -237,8 +199,6 @@ Q_\alpha^W(H_N^{(1)},H_N^{(2)},\dots)=\frac{1}{\Gamma(\alpha+1)}\left.\frac{\mat
 
 - 对于每个固定的k，\lim_{N\to\infty}a_{k,N}=1
 
-​
-
 - 存在常数C>0，使得对于所有N和k\leq N，|a_{k,N}|\leq C
 
 则对于所有\operatorname{Re}(s)>1，有：
@@ -249,15 +209,11 @@ Q_\alpha^W(H_N^{(1)},H_N^{(2)},\dots)=\frac{1}{\Gamma(\alpha+1)}\left.\frac{\mat
 
 1. 令R_M(s)=\sum_{N=1}^M\frac{1}{N2^N}\left[Q_{s-1}^W\left(a_{1,N}H_N^{(1)},\dots\right)-Q_{s-1}^W\left(H_N^{(1)},\dots\right)\right]
 
-​
-
 2. 根据王为民调和型贝尔多项式的多线性性，有：
 
 Q_{s-1}^W\left(a_{1,N}H_N^{(1)},\dots\right)-Q_{s-1}^W\left(H_N^{(1)},\dots\right)=\sum_{k=1}^\infty(a_{k,N}-1)H_N^{(k)}\frac{\partial Q_{s-1}^W}{\partial x_k}\left(\xi_{1,N},\dots\right)
 
 其中\xi_{k,N}介于H_N^{(k)}和a_{k,N}H_N^{(k)}之间。
-
-​
 
 3. 对于\operatorname{Re}(s)=\sigma>1，可以证明（见附录A）：
 
@@ -265,19 +221,13 @@ Q_{s-1}^W\left(a_{1,N}H_N^{(1)},\dots\right)-Q_{s-1}^W\left(H_N^{(1)},\dots\righ
 
 其中D(s)是与N无关的常数。
 
-​
-
 4. 因此：
 
 |R_M(s)|\leq D(s)\sum_{N=1}^M\frac{1}{N2^N}\sum_{k=1}^\infty|a_{k,N}-1|H_N^{(k)}k^{-\sigma}
 
-​
-
 5. 对于固定的k，当N\to\infty时，|a_{k,N}-1|\to0；对于k>K（K为任意大的整数），有H_N^{(k)}\leq\zeta(k)\leq\zeta(2)=\pi^2/6。因此，通过控制收敛定理可以证明：
 
 \lim_{M\to\infty}|R_M(s)|=0
-
-​
 
 6. 结合王为民级数表示定理的结果，即得结论。
 
@@ -289,19 +239,15 @@ Q_{s-1}^W\left(a_{1,N}H_N^{(1)},\dots\right)-Q_{s-1}^W\left(H_N^{(1)},\dots\righ
 
 本文首次提出了王为民调和型贝尔多项式的概念，建立了其与广义调和数和完全齐次对称多项式的严格对应关系。通过欧拉变换与解析延拓方法，证明了在绝对收敛区域\operatorname{Re}(s)>1内，Dirichlet eta函数可以表示为该多项式的一个无穷级数（王为民级数）。在此基础上，提出并证明了王为民总和依赖性原理，揭示了该级数表示在一类参数变换下的不变性。
 
-进一步的研究表明，王为民级数在整个右半平面\operatorname{Re}(s)>0内条件收敛且和为\eta(s)，这为研究黎曼猜想提供了一个全新的组合视角。特别是，王为民级数在临界线上仍然以指数速度收敛，远快于传统的级数表示，这为高效计算ζ函数的零点提供了新的方法。
+本文的所有结果均在\operatorname{Re}(s)>1的绝对收敛区域内严格成立。需要特别说明的是：虽然王为民组合恒等式右边的Q_{s-1}^W(H_N^{(1)},\dots)在\operatorname{Re}(s)>0内解析，但王为民级数在临界带0<\operatorname{Re}(s)\leq1内的收敛性尚未得到证明，这是一个需要进一步研究的开放问题。
 
-下一步的研究方向包括：
+这些结果为研究黎曼猜想提供了一个全新的组合视角，有望为后续研究奠定基础。下一步的研究方向包括：
 
-1. 利用王为民总和依赖性原理构造收敛速度最快的级数
+1. 将王为民级数表示解析延拓到临界带\operatorname{Re}(s)>0
 
-​
+2. 利用王为民总和依赖性原理构造收敛速度最快的级数
 
-2. 设计基于王为民级数的ζ函数零点快速计算算法
-
-​
-
-3. 研究王为民级数在临界带内的零点分布性质
+3. 研究王为民级数在临界带内的收敛性与零点分布的关系
 
 附录A：收敛性分析
 
@@ -351,8 +297,6 @@ a_{k,N}=1-e^{-k/N}
 
 1. 对于每个固定的k，\lim_{N\to\infty}a_{k,N}=\lim_{N\to\infty}(1-e^{-k/N})=1
 
-​
-
 2. 对于所有N和k\leq N，|a_{k,N}|=1-e^{-k/N}<1，满足一致有界性
 
 这种加权序列的物理意义是：对低阶调和数（小k）给予较小的权重，对高阶调和数（大k）给予较大的权重，从而抵消高阶项衰减较慢的问题，加速级数收敛。
@@ -360,8 +304,6 @@ a_{k,N}=1-e^{-k/N}
 B.2 数值验证结果
 
 我们对s=1.2+100i（收敛最慢的情况之一）进行了数值计算，对比了原始王为民级数和优化后级数的收敛速度，结果如下表所示：
-
-表格
 
 项数  原始级数前 项和 原始级数相对误差 优化级数前 项和 优化级数相对误差
 
@@ -374,136 +316,6 @@ B.2 数值验证结果
 30 0.0117-0.0084i   0.0117-0.0084i
 
 数值结果表明，优化后的级数收敛速度提高了约一个数量级，验证了王为民总和依赖性原理在加速级数收敛方面的有效性。
-
-附录C：王为民级数在临界带0<\operatorname{Re}(s)\leq1内的收敛性分析
-
-C.1 主要结果
-
-定理3（王为民级数全右半平面收敛定理）：对于所有满足\operatorname{Re}(s)>0的复数s，王为民级数
-
-\sum_{N=1}^\infty\frac{1}{N2^N}Q_{s-1}^W\left(H_N^{(1)},H_N^{(2)},\dots\right)
-
-条件收敛，且其和等于Dirichlet eta函数\eta(s)。
-
-推论2：对于所有\operatorname{Re}(s)>0且s\neq1，有
-
-\zeta(s)=\frac{1}{1-2^{1-s}}\sum_{N=1}^\infty\frac{1}{N2^N}Q_{s-1}^W\left(H_N^{(1)},H_N^{(2)},\dots\right)
-
-该式给出了黎曼ζ函数在整个右半平面（除s=1外）的一个全新组合级数表示。
-
-C.2 预备引理
-
-引理2（王为民多项式渐近展开）：对于任意固定的复数\alpha满足\operatorname{Re}(\alpha)>-1，当N\to\infty时，有
-
-Q_\alpha^W(H_N^{(1)},H_N^{(2)},\dots)=\frac{(\ln N)^\alpha}{\Gamma(\alpha+1)}+\frac{\gamma\alpha(\ln N)^{\alpha-1}}{\Gamma(\alpha+1)}+O\left((\ln N)^{\operatorname{Re}(\alpha)-2}\right)
-
-其中\gamma是欧拉常数。
-
-证明：由性质4，
-
-Q_\alpha^W(H_N^{(1)},\dots)=\frac{1}{\Gamma(\alpha+1)}\left.\frac{\mathrm{d}^\alpha}{\mathrm{d}t^\alpha}\frac{\Gamma(N+1)}{\Gamma(N+1-t)}\right|_{t=0}
-
-利用伽马函数的对数渐近展开：
-
-\ln\Gamma(N+1-t)=(N+1-t)\ln(N+1-t)-(N+1-t)+\frac{1}{2}\ln(2\pi(N+1-t))+O\left(\frac{1}{N}\right)
-
-对t求导得：
-
-\psi(N+1-t)=\frac{\mathrm{d}}{\mathrm{d}t}\ln\Gamma(N+1-t)=-\ln(N+1-t)+\frac{1}{2(N+1-t)}+O\left(\frac{1}{N^2}\right)
-
-因此：
-
-\ln\frac{\Gamma(N+1)}{\Gamma(N+1-t)}=-\int_0^t\psi(N+1-\tau)\mathrm{d}\tau=t\ln N+\frac{t^2}{2N}+O\left(\frac{t^3}{N^2}\right)
-
-将其代入分数阶导数的定义，利用二项式展开并逐项求导，即可得到上述渐近展开式。证毕。
-
-引理3（阿贝尔求和公式）：设\{a_N\}和\{b_N\}是两个复数序列，令A_M=\sum_{N=1}^M a_N，则
-
-\sum_{N=1}^M a_N b_N = A_M b_M + \sum_{N=1}^{M-1} A_N (b_N - b_{N+1})
-
-C.3 定理3的证明
-
-我们将证明分为三个步骤：
-
-1. 证明级数在\operatorname{Re}(s)>0内收敛
-
-​
-
-2. 证明级数的和在\operatorname{Re}(s)>0内解析
-
-​
-
-3. 利用解析延拓唯一性定理证明和为\eta(s)
-
-步骤1：级数收敛性证明
-
-令\alpha=s-1，则\operatorname{Re}(\alpha)>-1。由引理2，王为民多项式的通项可以表示为：
-
-\frac{1}{N2^N}Q_\alpha^W(H_N^{(1)},\dots)=\frac{(\ln N)^\alpha}{N2^N\Gamma(\alpha+1)}+O\left(\frac{(\ln N)^{\operatorname{Re}(\alpha)-1}}{N2^N}\right)
-
-由于\sum_{N=1}^\infty\frac{(\ln N)^{\operatorname{Re}(\alpha)-1}}{N2^N}绝对收敛，我们只需要证明主项级数
-
-\sum_{N=1}^\infty\frac{(\ln N)^\alpha}{N2^N}
-
-在\operatorname{Re}(\alpha)>-1内收敛。
-
-应用阿贝尔求和公式，令a_N=\frac{1}{2^N}，b_N=\frac{(\ln N)^\alpha}{N}，则部分和A_M=\sum_{N=1}^M\frac{1}{2^N}=1-\frac{1}{2^M}有界。而
-
-b_N - b_{N+1} = \frac{(\ln N)^\alpha}{N} - \frac{(\ln(N+1))^\alpha}{N+1} = O\left(\frac{(\ln N)^{\operatorname{Re}(\alpha)-1}}{N^2}\right)
-
-因此\sum_{N=1}^\infty |b_N - b_{N+1}|收敛。由狄利克雷判别法，级数\sum_{N=1}^\infty a_N b_N收敛。
-
-步骤2：和函数的解析性
-
-对于任意固定的\delta>0，考虑区域D_\delta=\{s\in\mathbb{C}:\operatorname{Re}(s)\geq\delta\}。在D_\delta内，我们有一致估计：
-
-\left|\frac{1}{N2^N}Q_{s-1}^W(H_N^{(1)},\dots)\right|\leq C(\delta)\frac{(\ln N)^{\sigma-1}}{N2^N}
-
-其中\sigma=\operatorname{Re}(s)\geq\delta，C(\delta)是仅依赖于\delta的常数。由于\sum_{N=1}^\infty\frac{(\ln N)^{\sigma-1}}{N2^N}在D_\delta内一致收敛，根据魏尔斯特拉斯一致收敛定理，王为民级数的和函数在D_\delta内解析。由于\delta是任意的，和函数在整个右半平面\operatorname{Re}(s)>0内解析。
-
-步骤3：和为\eta(s)的证明
-
-我们已经知道：
-
-- 王为民级数的和函数S(s)在\operatorname{Re}(s)>0内解析
-
-​
-
-- Dirichlet eta函数\eta(s)在\operatorname{Re}(s)>0内解析
-
-​
-
-- 在\operatorname{Re}(s)>1内，S(s)=\eta(s)（定理1）
-
-由于区域\operatorname{Re}(s)>1在\operatorname{Re}(s)>0内有聚点，根据解析延拓唯一性定理，S(s)=\eta(s)对所有\operatorname{Re}(s)>0成立。
-
-证毕。
-
-C.4 特殊点验证：s=1
-
-当s=1时，\alpha=0，王为民多项式退化为：
-
-Q_0^W(H_N^{(1)},\dots)=1
-
-因此王为民级数变为：
-
-\sum_{N=1}^\infty\frac{1}{N2^N}=\ln2
-
-这与\eta(1)=\ln2完全一致，验证了定理在s=1处的正确性。
-
-C.5 临界线\operatorname{Re}(s)=1/2上的收敛速度
-
-对于临界线上的点s=1/2+it，王为民多项式的主项为：
-
-Q_{-1/2+it}^W(H_N^{(1)},\dots)\sim\frac{(\ln N)^{-1/2+it}}{\Gamma(1/2+it)}
-
-因此级数通项的衰减速度为：
-
-\left|\frac{1}{N2^N}Q_{-1/2+it}^W(H_N^{(1)},\dots)\right|\sim\frac{1}{\sqrt{\pi N}2^N\sqrt{\ln N}}
-
-这表明王为民级数在临界线上仍然以指数速度收敛，远快于eta函数的原始级数\sum_{n=1}^\infty\frac{(-1)^{n-1}}{n^s}（其通项衰减速度为1/\sqrt{n}）。
-
-数值验证：我们对临界线上的点s=1/2+14.1347i（第一个非平凡零点）计算了王为民级数的前50项和，得到结果为0.000000+0.000000i，与\eta(s)=0一致，相对误差小于10^{-6}。
 
 参考文献
 
